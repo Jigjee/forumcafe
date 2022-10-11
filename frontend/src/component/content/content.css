@@ -1,0 +1,97 @@
+header {
+  /* height: 100vh; */
+
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+header .content__top {
+  position: absolute;
+  left: 65%;
+  transform: translate(-35%);
+  top: 7.5rem;
+}
+
+header p {
+  font-size: 0.8rem;
+}
+
+/* ================== cover ================*/
+.cover img {
+  width: 100%;
+}
+
+/* ================== CT ================*/
+.content__bot {
+  margin-top: 1.7rem;
+  display: grid;
+  grid-template-columns: 30% 50%;
+  gap: 8%;
+}
+
+.content__bot__l img {
+  width: 50%;
+  border-radius: 50%;
+  margin-left: 7rem;
+}
+
+.content__bot__r p {
+  padding-top: 1rem;
+}
+
+.content__bot__r .btn {
+  margin-top: 1.5rem;
+}
+
+/* ================== SCROLL DOWN ================*/
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 50%;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/*==================== MEDIA QUERIES (MEDIUM DEVICES) ======================== */
+@media screen and (max-width: 1024px) {
+  /* header {
+    height: 68vh;
+  } */
+}
+
+/*==================== MEDIA QUERIES (SMALL DEVICES) ======================== */
+@media screen and (max-width: 600px) {
+  .content__bot {
+    grid-template-columns: 1fr;
+  }
+
+  header .content__top {
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  header p {
+    display: none;
+  }
+
+  .content__bot__r h2 {
+    font-size: 1rem;
+  }
+
+  .scroll__down {
+    display: none;
+  }
+
+  .content__bot__l img {
+    margin-left: 5.5rem;
+    margin-top: 1.5rem;
+  }
+}

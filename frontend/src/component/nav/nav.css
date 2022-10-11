@@ -1,0 +1,116 @@
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: block;
+  padding: 0.5rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  /* left: 50%;
+    transform: translate(-50%); */
+  top: 0 auto;
+  display: flex;
+  gap: 2rem;
+  /* border-radius: 3rem; */
+  backdrop-filter: blur(15px);
+  align-items: center;
+  justify-content: center;
+}
+.logo h4 {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+nav img {
+  width: 45px;
+}
+nav a {
+  background: transparent;
+  padding: 0.3rem;
+  padding-top: 0.5rem;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+/* nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+} */
+
+nav a.active {
+  /* background: var(--color-primary); */
+  color: var(--color-white);
+}
+
+/* ================== Menu ================*/
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.mobile-menu {
+  display: none;
+  color: var(--color-white);
+  position: absolute;
+  z-index: 2;
+  right: 2rem;
+  top: 1rem;
+  font-size: 1.5rem;
+}
+
+/*==================== MEDIA QUERIES (MEDIUM DEVICES) ======================== */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+/*==================== MEDIA QUERIES (SMALL DEVICES) ======================== */
+@media screen and (max-width: 600px) {
+  nav {
+    justify-content: space-between;
+  }
+  .mobile-menu {
+    display: block;
+    color: var(--color-white);
+    font-size: 2rem;
+    position: fixed;
+  }
+  .menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 65px;
+    opacity: 0;
+    transition: 0.1s ease;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(1px);
+  }
+
+  .menu.active {
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+    align-content: center;
+    transition: 1s ease;
+    padding-left: 0;
+  }
+
+  .menu-link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 10vw;
+    padding: 0 auto;
+  }
+
+  .menu-link :hover {
+    font-size: 1.2rem;
+  }
+
+  .scroll__down {
+    display: none;
+  }
+}
